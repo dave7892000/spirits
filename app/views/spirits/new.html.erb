@@ -1,0 +1,19 @@
+<%= form_with model: @spirit do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :spirit_type %>
+    <%= form.text_field :spirit_type %>
+  </div>
+  <div>
+    <%= form.label :abv %>
+    <%= form.number_field :abv %>
+  </div>
+  <%= form.submit %>
+<% end %>
+
+<br>
+<%= link_to "Back to Spirits Index", spirits_path%>
+

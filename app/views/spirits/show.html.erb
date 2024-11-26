@@ -1,0 +1,6 @@
+<%= @spirit.name %>
+
+
+<br>
+
+<%= link_to "Delete", spirit_path(@spirit), class: "btn btn-outline-danger", data: {confirm: "Are you sure?", "turbo-method": :delete} %>
