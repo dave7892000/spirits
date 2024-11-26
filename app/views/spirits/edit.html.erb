@@ -1,0 +1,16 @@
+<%= form_with model: @spirit, local: true do |f|%>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name, placeholder: "Name of Spirit" %>
+  </div>
+  <div>
+    <%= f.label :abv %>
+    <%= f.text_field :abv, placeholder: "ABV of spirit" %>
+  </div>
+  <div>
+    <%= f.label :spirit_type %>
+    <%= f.text_field :spirit_type, placeholder: "Type of spirit" %>
+  </div>
+  <%= f.submit "Update Spirit"%>
+  
+<% end %>

@@ -1,0 +1,19 @@
+This is the spirits page
+
+<br>
+
+Spirit Name: 
+<% @spirits.each do |spirit| %>
+  Spirit Name: <%= link_to "#{spirit.name}", spirit_path(spirit) %>
+  Spirit ABV: <%= spirit.abv %>
+  Spirit Type: <%= spirit.spirit_type %>
+  <br>
+<% end %>
+
+<br>
+<%= link_to "Create a new spirit", new_spirit_path%>
+
+
+
+
+
