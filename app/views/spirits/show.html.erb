@@ -4,5 +4,5 @@
 
 <br>
 
-<%= link_to "Delete", spirit_path(@spirit), class: "btn", data: {confirm: "Are you sure?", "turbo-method": :delete} %>
+<%= link_to "Delete", spirit_path(@spirit), class: "btn", data: { "turbo-method": :delete, confirm: "Are you sure?" } %>
 <%= link_to "Edit your spirit", edit_spirit_path, class: "btn"%>

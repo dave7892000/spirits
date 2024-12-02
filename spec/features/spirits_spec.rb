@@ -33,12 +33,29 @@ RSpec.feature "some word" do
     click_link "Delete"
     expect(page).to_not have_content("Bulleit")
     expect(Spirit.where(name: "Bulleit").exists?).to eq(false)
+  end
 
+  scenario "can update a spirit" do
+    @spirit = FactoryBot.create(:spirit, name: "Robert Mondavi", abv: 13, spirit_type: "Wine")
+    visit spirit_path(@spirit)
+    click_link "Edit your spirit"
+    expect(page).to have_field("Name", :with => "Robert Mondavi")
+    expect(page).to have_field("Abv", :with => 13.0)
+    expect(page).to have_field("Spirit type", :with => "Wine")
+
+    fill_in "Name", with: "Opus One"
+    fill_in "Abv", with: 14
+    fill_in "Spirit type", with: "Expensive wine"
+
+    click_button "Update Spirit"
+    @spirit.reload
+
+    expect(page).to have_content("Spirit Name: Opus One")
+    expect(@spirit.name).to eq("Opus One")
   end
 end
 
 
 
-# We should write some befores...
 
 # @spirit = FactoryBot.create(:spirit, name: "Buffalo Trace")

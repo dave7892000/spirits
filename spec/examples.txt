@@ -4,6 +4,7 @@ example_id                           | status | run_time        |
 ./spec/features/spirits_spec.rb[1:2] | passed | 0.01871 seconds |
 ./spec/features/spirits_spec.rb[1:3] | passed | 0.16221 seconds |
 ./spec/features/spirits_spec.rb[1:4] | passed | 0.02008 seconds |
+./spec/features/spirits_spec.rb[1:5] | failed | 0.18517 seconds |
 ./spec/models/spirit_spec.rb[1:1:1]  | passed | 0.00409 seconds |
 ./spec/models/spirit_spec.rb[1:1:2]  | passed | 0.0026 seconds  |
 ./spec/models/spirit_spec.rb[1:1:3]  | passed | 0.00345 seconds |
