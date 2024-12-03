@@ -14,9 +14,10 @@
   </div>
   <div>
     <%= form.select :user_id, User.all.map {|u| [u.name, u.id]} %>
+  </div>
   <%= form.submit %>
+  
 <% end %>
 
 <br>
 <%= link_to "Back to Spirits Index", spirits_path%>
-

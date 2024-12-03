@@ -22,7 +22,8 @@ class SpiritsController < ApplicationController
     if @spirit.save
       flash[:notice] = "Spirit was created successfully"
       redirect_to spirits_path
-    else render :new, status: :unprocessable_entity
+    else 
+      render :new, status: :unprocessable_entity
     end
   end
 
