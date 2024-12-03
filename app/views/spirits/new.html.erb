@@ -12,6 +12,8 @@
     <%= form.label :abv %>
     <%= form.number_field :abv %>
   </div>
+  <div>
+    <%= form.select :user_id, User.all.map {|u| [u.name, u.id]} %>
   <%= form.submit %>
 <% end %>
 

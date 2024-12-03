@@ -22,7 +22,7 @@ class SpiritsController < ApplicationController
     if @spirit.save
       flash[:notice] = "Spirit was created successfully"
       redirect_to spirits_path
-    else render :new, status: :unprocesable_entity
+    else render :new, status: :unprocessable_entity
     end
   end
 
@@ -43,7 +43,7 @@ class SpiritsController < ApplicationController
   private
 
   def spirit_params
-    (params.require(:spirit).permit(:name, :abv, :spirit_type))
+    (params.require(:spirit).permit(:name, :abv, :spirit_type, :user_id))
   end
 
   def set_spirit
