@@ -20,3 +20,4 @@ pkg/
 /yarn-error.log
 /test-reports/
 /log/
+/spec/examples.txt
